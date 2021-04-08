@@ -1,5 +1,8 @@
 # Flutter Web Frame
 
+[![Pub](https://img.shields.io/pub/v/flutter_web_frame.svg)](https://pub.dev/packages/flutter_web_frame)
+
+
 Make the frame max width / size when on large devices such as Web or Desktop.
 
 This is very suitable to be used to limit the size of content, if your application is not yet available a responsive version if it is run on multiple devices / platforms.
