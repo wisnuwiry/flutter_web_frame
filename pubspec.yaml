@@ -1,9 +1,9 @@
 name: flutter_web_frame
-description: Limit const size for Flutter Web/Desktop/PWA
+description: Make Limit content size in Flutter Web/Desktop/PWA, Make your app that doesn't support responsiveness more focused on content
 repository: https://github.com/wisnuwiry/flutter_web_frame
 issue_tracker: https://github.com/wisnuwiry/flutter_web_frame/issues
 homepage: https://github.com/wisnuwiry/flutter_web_frame
-version: 0.0.1
+version: 0.0.2
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
