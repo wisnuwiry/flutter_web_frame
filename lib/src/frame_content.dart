@@ -4,11 +4,18 @@ class FrameContent extends StatelessWidget {
   /// Size frame
   final Size size;
 
+  /// Clip behavior
+  final Clip clipBehavior;
+
   /// Child widget
   final Widget child;
 
-  const FrameContent({Key? key, required this.size, required this.child})
-      : super(key: key);
+  const FrameContent({
+    Key? key,
+    required this.size,
+    required this.clipBehavior,
+    required this.child,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +41,22 @@ class FrameContent extends StatelessWidget {
     final sizeWidth =
         currentSize.width > size.width ? size.width : currentSize.width;
 
-    return SizedBox(
+    final box = SizedBox(
       width: sizeWidth,
       height: MediaQuery.of(context).size.height,
       child: MediaQuery(
         data: FrameContent.mediaQuery(context, size),
         child: child,
       ),
+    );
+
+    if (clipBehavior == Clip.none) {
+      return box;
+    }
+
+    return ClipRect(
+      clipBehavior: clipBehavior,
+      child: box,
     );
   }
 }
