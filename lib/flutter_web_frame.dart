@@ -1,6 +1,5 @@
 library flutter_web_frame;
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'src/frame_content.dart';
@@ -21,12 +20,16 @@ class FlutterWebFrame extends StatefulWidget {
   /// Maximum size
   final Size maximumSize;
 
+  /// Clip behavior
+  final Clip clipBehavior;
+
   const FlutterWebFrame({
     Key? key,
     required this.builder,
     this.enabled = true,
     this.backgroundColor,
     required this.maximumSize,
+    this.clipBehavior = Clip.none,
   }) : super(key: key);
 
   /// A global builder that should be inserted into [WidgetApp]'s builder
@@ -118,6 +121,7 @@ class _FlutterWebFrameState extends State<FlutterWebFrame> {
       child: RepaintBoundary(
         child: FrameContent(
           size: widget.maximumSize,
+          clipBehavior: widget.clipBehavior,
           child: Builder(
             builder: widget.builder,
           ),
