@@ -32,7 +32,6 @@ class FrameContent extends StatelessWidget {
       size: size,
       viewInsets: EdgeInsets.zero,
       viewPadding: padding,
-      devicePixelRatio: size.width / size.height,
     );
   }
 
