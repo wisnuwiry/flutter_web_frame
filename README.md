@@ -35,7 +35,7 @@ class MyAp extends StatelessWidget {
         return MaterialApp(
           home: Scaffold(
             appBar: AppBar(
-              title: Text('Title '),
+              title: Text('Flutter Web Frame'),
             ),
             body: Center(
               child: Text('Body Text'),
